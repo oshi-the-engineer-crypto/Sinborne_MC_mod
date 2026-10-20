@@ -1,0 +1,13 @@
+{
+  "itemGroup.sinborne": "Example Mod Tab",
+  "block.sinborne.example_block": "Example Block",
+  "item.sinborne.example_item": "Example Item",
+
+  "sinborne.configuration.title": "Sinborne Configs",
+  "sinborne.configuration.section.sinborne.common.toml": "Sinborne Configs",
+  "sinborne.configuration.section.sinborne.common.toml.title": "Sinborne Configs",
+  "sinborne.configuration.items": "Item List",
+  "sinborne.configuration.logDirtBlock": "Log Dirt Block",
+  "sinborne.configuration.magicNumberIntroduction": "Magic Number Text",
+  "sinborne.configuration.magicNumber": "Magic Number"
+}
