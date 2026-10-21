@@ -1,5 +1,6 @@
 package com.oshi.sinborne;
 
+import com.oshi.sinborne.items.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -29,6 +30,8 @@ public class Sinborne {
 
         modEventBus.addListener(this::commonSetup);
 
+        ModItems.register(modEventBus);
+
         NeoForge.EVENT_BUS.register(this);
 
         // Register the item to a creative tab
@@ -44,7 +47,10 @@ public class Sinborne {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.BOOK_OF_THE_SIN);
+            event.accept(ModItems.SHATTERED_HALO);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
