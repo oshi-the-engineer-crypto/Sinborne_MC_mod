@@ -1,5 +1,6 @@
 package com.oshi.sinborne;
 
+import com.oshi.sinborne.creativemodetab.ModCreativeModeTabs;
 import com.oshi.sinborne.items.ModItems;
 import org.slf4j.Logger;
 
@@ -30,6 +31,8 @@ public class Sinborne {
 
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
@@ -51,7 +54,6 @@ public class Sinborne {
 
         }
     }
-
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {

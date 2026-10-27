@@ -20,7 +20,6 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> SINBORNE_ITEMS_TAB = CREATIVE_MODE_TABS.register("sinborne_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BOOK_OF_THE_SIN.get()))
                     .withTabsBefore(CreativeModeTabs.INGREDIENTS)
-                    .withTabsAfter(Identifier.fromNamespaceAndPath(Sinborne.MOD_ID, "sinborne_items_tab"))
                     .title(Component.translatable("item.creative_mode.sinborne"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.BOOK_OF_THE_SIN);
