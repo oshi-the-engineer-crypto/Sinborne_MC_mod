@@ -48,8 +48,7 @@ public class Sinborne {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.BOOK_OF_THE_SIN);
-            event.accept(ModItems.SHATTERED_HALO);
+
         }
     }
 
